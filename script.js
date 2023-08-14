@@ -7,18 +7,20 @@ addBookButton.addEventListener('click', () => {
 
     if (bookTitle && authorName) {
         var bookItem = document.createElement('p');
-        bookItem.innerHTML = bookTitle + ' ' + 'by' + ' ' + authorName;
+        bookItem.innerHTML = bookTitle + '<br> ' + 'by' + '<br> ' + authorName;
 
         var divider = document.createElement('hr');
+        
         var removeBook = document.createElement('button');
         removeBook.innerText = 'Remove';
+        removeBook.style.display = 'block';
 
         removeBook.addEventListener('click', () => {
             bookItem.remove();
         });
 
         bookItem.appendChild(removeBook);
-        bookList.appendChild(divider);
+        bookItem.appendChild(divider);
         bookList.appendChild(bookItem);
 
         document.querySelector('#book-title').value = '';
