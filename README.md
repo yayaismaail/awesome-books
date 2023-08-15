@@ -14,6 +14,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -38,7 +39,46 @@
 
 ## 🛠 Built With <a name="built-with">HTML/JS</a>
 
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="#">HTML</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="#">CSS</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="#">JS</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **[Add a book into a list]**
+- **[Remove a book]**
+- **[Preserved data in localStorage]**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+- [Live Demo Link](coming soon)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -86,8 +126,7 @@ Use browser like chrome by clicking on the link or use live server built in VSCo
 
 ### Deployment
 
-Coming Soon.. 
-
+Coming Soon...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
