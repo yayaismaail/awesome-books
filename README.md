@@ -86,9 +86,7 @@ Use browser like chrome by clicking on the link or use live server built in VSCo
 
 ### Deployment
 
-You can deploy this project using 
-- [Netlify](https://www.netlify.com/) or 
-- [Github Pages](https://pages.github.com/)
+Coming Soon.. 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -121,8 +119,6 @@ You can deploy this project using
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[Navbar]**
 
