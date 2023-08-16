@@ -6,23 +6,20 @@
   text-decoration: none;
 }
 
-.header {
+.container {
   display: flex;
   justify-content: space-between;
   padding: 20px;
   align-items: center;
-  border: 1px solid black;
-  margin: 1px 10px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: white;
+  margin: 0px 10px;
+  height: auto;
+  border: 1px solid;
 }
 
 .navlist {
   display: flex;
   gap: 10px;
+  height: auto;
 }
 
 .navlist li:nth-child(2) {
@@ -41,10 +38,7 @@
 }
 
 .book-list {
-  margin: 20px 0;
   padding: 0;
-  height: 100vh;
-  border: 1px solid blue;
 }
 
 .display-books:nth-child(odd) {
@@ -146,8 +140,42 @@
   box-shadow: 2px 2px 10px;
 }
 
-.form-secton {
+.form-section {
   height: 100vh;
+  margin-top: 100px;
+  padding-top: 20px;
+}
+.date {
+  z-index: 7;
+  width: auto;
+  text-align: end;
+  padding: 10px;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 100px;
+}
+
+.hideform {
+  display: none;
+}
+
+.section1 {
+  height: 90vh;
+}
+
+.footer {
+  border: 2px solid;
+  width: 100%;
+  top: 570px;
+  position: fixed;
+  height: 30px;
+  padding: 5px;
 }
 
 /* Desktop */
@@ -159,8 +187,8 @@
 
   .book-list {
     width: 50vw;
-    margin: 20px auto;
-    padding: 0;
+    margin: 150px auto 0 auto;
+    padding-top: 20px;
   }
 
   .display-item {

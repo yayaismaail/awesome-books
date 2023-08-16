@@ -6,32 +6,42 @@
     <title>Book Library</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+    <script src="date.js" defer></script>
+    <script src="displaySections.js" defer></script>
   </head>
   <body>
     <header class="header">
-      <div class="log">Awesome Books</div>
-      <nav class="navbar">
-        <ul class="navlist">
-          <li><a href="#list-books">List</a></li>
-          <li><a href="#form">Add new</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="container">
+        <div class="log">Awesome Books</div>
+        <nav class="navbar">
+          <ul class="navlist">
+            <li><a href="#" class="list">List</a></li>
+            <li><a href="#" class="addnew">Add new</a></li>
+            <li><a href="#" class="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="date"></div>
     </header>
-
-    <section class="book-list" id="list-books">
-      <h1 class="title">Awesome books</h1>
-    </section>
-    <div class="divider"></div>
-    <h3 class="add-new-book">Add New Book</h3>
+    <div class="section1">
+      <section class="book-list" id="list-books">
+        <h1 class="title">Awesome books</h1>
+      </section>
+      <div class="divider"></div>
+    </div>
 
     <section class="form-section">
+      <h3 class="add-new-book">Add New Book</h3>
       <form class="form" id="form">
         <input type="text" id="book-title" placeholder="Enter book title" />
         <input type="text" id="author-name" placeholder="Enter author" />
         <button id="add-book" class="button">Add</button>
+        <p class="display"></p>
       </form>
-      <p class="display"></p>
     </section>
+
+    <footer class="footer">
+      <span>copyright.....</span>
+    </footer>
   </body>
 </html>
