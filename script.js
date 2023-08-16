@@ -1,84 +1,68 @@
-// create empty list [{book:title, author:athorName}]
-// put in localStorage
-// fetch from local storage
-// display to user
-// remove from list and update localStorage
+/* eslint-disable no-unused-vars */
+class LibraryApp {
+  constructor() {
+    this.addBookButton = document.querySelector('#add-book');
+    this.bookList = document.querySelector('.book-list');
+    this.libBooks = JSON.parse(localStorage.getItem('libraryBooks')) || [];
 
-const addBookButton = document.querySelector('#add-book');
-const bookList = document.querySelector('.book-list');
-const libBooks = JSON.parse(localStorage.getItem('libraryBooks')) || [];
-
-// Function to update local storage
-function updateLocalStorage() {
-  localStorage.setItem('libraryBooks', JSON.stringify(libBooks));
-}
-// Grabbing the value of the books and the author when the addBookButton is clicked
-addBookButton.addEventListener('click', (e) => {
-  const bookTitle = document.querySelector('#book-title').value;
-  const authorName = document.querySelector('#author-name').value;
-  const message = document.querySelector('.message');
-
-  if (bookList === '' || authorName === '') {
-    message.innerText = 'Please input Title and Author';
-    e.preventDefault();
+    this.libBooks.forEach((book) => this.displayBook(book));
   }
 
-  // check if bookTitle and authorName are present
-  if (bookTitle && authorName) {
-    // create an object of the book and author
+  updateLocalStorage() {
+    localStorage.setItem('libraryBooks', JSON.stringify(this.libBooks));
+  }
+
+  handleAddBook(e) {
+    e.preventDefault();
+
+    const bookTitle = document.querySelector('#book-title').value;
+    const authorName = document.querySelector('#author-name').value;
+    const display = document.querySelector('.display');
+
+    if (bookTitle === '' || authorName === '') {
+      display.classList.add('message');
+      display.innerText = 'Please Enter Title and Author';
+
+      return;
+    }
+
     const book = { book: bookTitle, author: authorName };
-    libBooks.push(book);
-    updateLocalStorage();
-
-    const bookItem = document.createElement('p');
-    bookItem.innerHTML = `${bookTitle}<br>   by  <br> ${authorName}`;
-
-    const divider = document.createElement('hr');
-
-    const removeBook = document.createElement('button');
-    removeBook.innerText = 'Remove';
-
-    removeBook.className = 'rmbook';
-
-    removeBook.addEventListener('click', () => {
-      // Romoving the book from localStorage
-      const index = libBooks.findIndex(
-        (b) => b.book === bookTitle && b.author === authorName,
-      );
-      if (index !== -1) {
-        libBooks.splice(index, 1);
-        updateLocalStorage();
-      }
-      bookItem.remove();
-    });
-    bookItem.append(removeBook, divider);
-    bookList.append(bookItem);
+    this.libBooks.push(book);
+    this.updateLocalStorage();
+    this.displayBook(book);
 
     document.querySelector('#book-title').value = '';
     document.querySelector('#author-name').value = '';
   }
-});
 
-// Fetch books from local storage and display them
-libBooks.forEach((book) => {
-  const bookItem = document.createElement('p');
-  bookItem.innerHTML = `${book.book}<br>   by  <br> ${book.author}`;
+  displayBook(book) {
+    const div = document.createElement('div');
+    div.className = 'display-books';
+    const bookItem = document.createElement('p');
+    bookItem.className = 'display-item';
+    bookItem.innerHTML = `${book.book} by ${book.author}`;
 
-  const divider = document.createElement('hr');
+    const removeBook = document.createElement('button');
+    removeBook.innerText = 'Remove';
+    removeBook.className = 'rmv-btn';
 
-  const removeBook = document.createElement('button');
-  removeBook.innerText = 'Remove';
-  removeBook.style.display = 'block';
+    removeBook.addEventListener('click', () => {
+      const index = this.libBooks.indexOf(book);
+      if (index !== -1) {
+        this.libBooks.splice(index, 1);
+        this.updateLocalStorage();
+      }
+      bookItem.remove();
+    });
 
-  removeBook.addEventListener('click', () => {
-    const index = libBooks.indexOf(book);
-    if (index !== -1) {
-      libBooks.splice(index, 1);
-      updateLocalStorage();
-    }
-    bookItem.remove();
-  });
+    bookItem.append(removeBook);
+    div.append(bookItem);
+    this.bookList.append(div);
+  }
+}
 
-  bookItem.append(removeBook, divider);
-  bookList.appendChild(bookItem);
+const libraryApp = new LibraryApp();
+const button = document.querySelector('#add-book');
+button.addEventListener('click', (e) => {
+  libraryApp.handleAddBook(e);
 });
