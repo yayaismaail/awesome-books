@@ -23,12 +23,7 @@
   height: auto;
 }
 
-.navlist li:nth-child(1) {
-  border-right: 1px solid;
-  padding-right: 15px;
-  
-}
-
+.navlist li:nth-child(1),
 .navlist li:nth-child(2) {
   border-right: 1px solid;
   padding-right: 15px;
@@ -86,6 +81,26 @@
   align-items: flex-end;
   width: 55%;
   margin: 0 auto;
+}
+
+#contact-section {
+  display: flex;
+  justify-content: center;
+}
+
+.contactUs {
+  text-align: left;
+  max-width: 25em;
+}
+
+.contactUs ul {
+  list-style: inside;
+  text-align: left;
+  margin: 1em 2em;
+}
+
+.contactUs ul li {
+  list-style: disc;
 }
 
 #book-title,
@@ -184,7 +199,6 @@ footer {
   width: 98.8%;
   margin-bottom: 5px;
 }
-
 
 /* Desktop */
 @media (min-width: 768px) {
