@@ -11,7 +11,7 @@
   justify-content: space-between;
   padding: 20px;
   align-items: center;
-  margin: 0px 10px;
+  margin: 10px 10px;
   height: auto;
   border: 1px solid;
   border-radius: 6px;
@@ -23,10 +23,15 @@
   height: auto;
 }
 
+.navlist li:nth-child(1) {
+  border-right: 1px solid;
+  padding-right: 15px;
+  
+}
+
 .navlist li:nth-child(2) {
   border-right: 1px solid;
-  border-left: 1px solid;
-  padding: 0 3px;
+  padding-right: 15px;
 }
 
 .title {
@@ -119,7 +124,7 @@
   background-color: #4caf50;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 5px #999;
+  box-shadow: 0 3px #999;
 }
 
 .button:hover {
