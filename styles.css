@@ -170,9 +170,9 @@
 }
 
 .footer {
-  border: 2px solid;
+  border-top: 2px solid;
   width: 100%;
-  top: 570px;
+  top: 585px;
   position: fixed;
   height: 30px;
   padding: 5px;
