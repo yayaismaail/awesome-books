@@ -1,94 +1,61 @@
-class AwesomeBooks {
+/* eslint-disable no-unused-vars */
+class LibraryApp {
   constructor() {
-    this.libBooks = JSON.parse(localStorage.getItem("libraryBooks")) || [];
-    window.addEventListener("load", () => {
-      this.displayBooks();
-    });
+    this.addBookButton = document.querySelector('#add-book');
+    this.bookList = document.querySelector('.book-list');
+    this.libBooks = JSON.parse(localStorage.getItem('libraryBooks')) || [];
+
+    this.addBookButton.addEventListener('click', this.handleAddBook.bind(this));
+    this.libBooks.forEach((book) => this.displayBook(book));
   }
 
   updateLocalStorage() {
-    localStorage.setItem("libraryBooks", JSON.stringify(this.libBooks));
+    localStorage.setItem('libraryBooks', JSON.stringify(this.libBooks));
   }
 
-  addBook(e) {
+  handleAddBook(e) {
     e.preventDefault();
-    const bookTitle = document.querySelector("#book-title").value;
-    const authorName = document.querySelector("#author-name").value;
-    const message = document.querySelector(".message");
-    const bookList = document.querySelector(".book-list");
-    console.log(bookList);
 
-    if (bookList === "" || authorName === "") {
-      message.innerText = "Please input Title and Author1";
+    const bookTitle = document.querySelector('#book-title').value;
+    const authorName = document.querySelector('#author-name').value;
+    const message = document.querySelector('.message');
+
+    if (bookTitle === '' || authorName === '') {
+      message.innerText = 'Please input Title and Author';
       return;
     }
 
-    // check if bookTitle and authorName are present
-    if (bookTitle && authorName) {
-      // create an object of the book and author
-      const book = { book: bookTitle, author: authorName };
-      this.libBooks.push(book);
-      this.updateLocalStorage();
+    const book = { book: bookTitle, author: authorName };
+    this.libBooks.push(book);
+    this.updateLocalStorage();
+    this.displayBook(book);
 
-      const bookItem = document.createElement("p");
-      bookItem.innerHTML = `${bookTitle}<br>   by  <br> ${authorName}`;
-
-      const divider = document.createElement("hr");
-
-      const removeBook = document.createElement("button");
-      removeBook.innerText = "Remove";
-
-      removeBook.className = "rmbook";
-
-      removeBook.addEventListener("click", () => {
-        // Romoving the book from localStorage
-        const index = this.libBooks.findIndex(
-          (b) => b.book === bookTitle && b.author === authorName
-        );
-        if (index !== -1) {
-          this.libBooks.splice(index, 1);
-          this.updateLocalStorage();
-        }
-        bookItem.remove();
-      });
-      bookItem.append(removeBook, divider);
-      bookList.append(bookItem);
-
-      document.querySelector("#book-title").value = "";
-      document.querySelector("#author-name").value = "";
-    }
+    document.querySelector('#book-title').value = '';
+    document.querySelector('#author-name').value = '';
   }
-  displayBooks() {
-    this.libBooks.forEach((book) => {
-      const bookItem = document.createElement("p");
-      const bookList = document.querySelector(".book-list");
-      bookItem.innerHTML = `${book.book}<br>   by  <br> ${book.author}`;
 
-      const divider = document.createElement("hr");
+  displayBook(book) {
+    const bookItem = document.createElement('p');
+    bookItem.innerHTML = `${book.book}<br>   by  <br> ${book.author}`;
 
-      const removeBook = document.createElement("button");
-      removeBook.innerText = "Remove";
-      removeBook.style.display = "block";
+    const divider = document.createElement('hr');
 
-      removeBook.addEventListener("click", () => {
-        const index = this.libBooks.indexOf(book);
-        if (index !== -1) {
-          this.libBooks.splice(index, 1);
-        }
-        bookItem.remove();
-      });
+    const removeBook = document.createElement('button');
+    removeBook.innerText = 'Remove';
+    removeBook.style.display = 'block';
 
-      bookItem.append(removeBook, divider);
-      bookList.appendChild(bookItem);
+    removeBook.addEventListener('click', () => {
+      const index = this.libBooks.indexOf(book);
+      if (index !== -1) {
+        this.libBooks.splice(index, 1);
+        this.updateLocalStorage();
+      }
+      bookItem.remove();
     });
+
+    bookItem.append(removeBook, divider);
+    this.bookList.appendChild(bookItem);
   }
 }
 
-//class ends here
-
-const newBook = new AwesomeBooks();
-const addBookButton = document.querySelector("#add-book");
-addBookButton.addEventListener("click", (e) => {
-  console.log("listener clicked");
-  newBook.addBook(e);
-});
+const libraryApp = new LibraryApp();
