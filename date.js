@@ -6,7 +6,6 @@ const day = today.getDay();
 const hour = today.getHours();
 const minutes = today.getMinutes();
 const seconds = today.getSeconds();
-const period = today.getTime();
 const currentDate = `${day}/${month}/${year}| ${hour}:${minutes}:${seconds} `;
 
 date.innerHTML = currentDate;
