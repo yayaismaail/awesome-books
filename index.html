@@ -6,17 +6,57 @@
     <title>Book Library</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+    <script src="date.js" defer></script>
+    <script src="displaySections.js" defer></script>
   </head>
   <body>
-    <h1 class="title">Awesome books</h1>
-    <section class="book-list"></section>
-    <div class="divider"></div>
-    <h3 class="add-new-book">Add New Book</h3>
-    <form class="form">
-      <input type="text" id="book-title" placeholder="Enter book title" />
-      <input type="text" id="author-name" placeholder="Enter author" />
-      <button id="add-book" class="button">Add</button>
-    </form>
-    <p class="display"></p>
+    <header class="header">
+      <div class="container">
+        <div class="log">Awesome Books</div>
+        <nav class="navbar">
+          <ul class="navlist">
+            <li><a href="#" class="list">List</a></li>
+            <li><a href="#" class="addnew">Add New</a></li>
+            <li><a href="#" class="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <section class="dt" id="date">
+        <p class="date"></p>
+      </section>
+    </header>
+    <div class="section1">
+      <section class="book-list" id="list-books">
+        <h1 class="title">Awesome books</h1>
+      </section>
+      <div class="divider"></div>
+    </div>
+
+    <section class="form-section">
+      <h3 class="add-new-book">Add New Book</h3>
+      <form class="form" id="form">
+        <input type="text" id="book-title" placeholder="Enter book title" />
+        <input type="text" id="author-name" placeholder="Enter author" />
+        <button id="add-book" class="button">Add</button>
+        <p class="display"></p>
+      </form>
+    </section>
+    <section id="contact-section">
+      <div class="contactUs">
+        <h1>Contact information</h1>
+        <p>
+          Do have any questions or you want to say "Hello"?<br />
+          you can reach out to us!
+        </p>
+        <ul>
+          <li>Our e-mail mail@mail.com</li>
+          <li>Our phone number: 0043586534422</li>
+          <li>Our address: Streetname 22, 84503 City, country</li>
+        </ul>
+      </div>
+    </section>
+    <footer class="footer">
+      <span>copyright.....@Ismail, @Kwamay, @Enoh.. </span>
+    </footer>
   </body>
 </html>

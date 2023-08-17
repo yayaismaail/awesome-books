@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  <h3><b>Awesome Book</b></h3>
+  <h3><b>Awesome Books Project</b></h3>
 
 </div>
 
@@ -14,7 +14,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -69,12 +68,14 @@
 - **[Add a book into a list]**
 - **[Remove a book]**
 - **[Preserved data in localStorage]**
+- **[Navigation ]**
+- **[Contact Section]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
-- [Live Demo Link](coming soon)
+- [Live Demo Link]( https://yayaismaail.github.io/awesome-books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,7 +160,7 @@ Coming Soon...
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Navbar]**
+- [ ] **[Contact Form]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
