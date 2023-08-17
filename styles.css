@@ -23,6 +23,10 @@
   height: auto;
 }
 
+.contactUs ul li {
+  list-style: disc;
+}
+
 .navlist li:nth-child(1),
 .navlist li:nth-child(2) {
   border-right: 1px solid;
@@ -88,19 +92,24 @@
   justify-content: center;
 }
 
+#contact-section h1 {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 23px;
+  padding-bottom: 30px;
+}
+
 .contactUs {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
   max-width: 25em;
+  margin-top: 9rem;
 }
 
 .contactUs ul {
   list-style: inside;
   text-align: left;
   margin: 1em 2em;
-}
-
-.contactUs ul li {
-  list-style: disc;
 }
 
 #book-title,
@@ -166,6 +175,7 @@
   margin-top: 100px;
   padding-top: 20px;
 }
+
 .date {
   z-index: 7;
   width: auto;
