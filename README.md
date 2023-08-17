@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  <h3><b>Awesome Book</b></h3>
+  <h3><b>Awesome Books Project</b></h3>
 
 </div>
 
