@@ -202,12 +202,13 @@
 
 footer {
   border: solid 2px black;
-  padding: 8px 10px;
+  padding: 10px 10px;
   border-radius: 5px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  width: 98.8%;
-  margin-bottom: 5px;
+  width: 99%;
+  margin: 0 10px;
+  background-color: #fff;
 }
 
 /* Desktop */
@@ -221,6 +222,7 @@ footer {
     width: 50vw;
     margin: 150px auto 0 auto;
     padding-top: 20px;
+    overflow: auto;
   }
 
   .display-item {
