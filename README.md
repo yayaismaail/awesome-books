@@ -69,12 +69,14 @@
 - **[Add a book into a list]**
 - **[Remove a book]**
 - **[Preserved data in localStorage]**
+- **[Navigation ]**
+- **[Contact Section]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 
-- [Live Demo Link](coming soon)
+- [Live Demo Link]( https://yayaismaail.github.io/awesome-books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,7 +161,7 @@ Coming Soon...
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Navbar]**
+- [ ] **[Contact Form]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
